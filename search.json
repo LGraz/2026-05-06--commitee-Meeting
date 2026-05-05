@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "index.html#planned-teaching-100-420h",
+    "href": "index.html#planned-teaching-100-420h",
+    "title": "Multivariate Transformation Models",
+    "section": "Planned Teaching (100-420h)",
+    "text": "Planned Teaching (100-420h)\n\nSemester 2 / 50h – STA425 Survival Analysis\nSemester 3 / 80h – STA402 Likelihood and Regression"
+  },
+  {
+    "objectID": "index.html#planned-course-work-min-12-ects",
+    "href": "index.html#planned-course-work-min-12-ects",
+    "title": "Multivariate Transformation Models",
+    "section": "Planned Course Work (min 12 ECTS)",
+    "text": "Planned Course Work (min 12 ECTS)\nMANDATORY:\n\n3 ECTS – STA4040DP Clinical Biostatistics\n1 ECTS – STA880DP Methods Seminar 1\n1 ECTS – STA880DP Methods Seminar 2\n0 ECTS – Scientific Integrity\n\nFREE CHOICE: (min 4 ECTS)\n\n7 ECTS – STA402 Likelihood and Regression I\n\nTRANSFERABLE SKILLS: (min 3 ECTS)\n\n1 ECTS – Verhandlungs- und Moderationstechniken\n1 ECTS – Project Management I\n1 ECTS – Leadership Skills"
+  },
+  {
+    "objectID": "index.html#defense",
+    "href": "index.html#defense",
+    "title": "Multivariate Transformation Models",
+    "section": "Defense",
+    "text": "Defense\nAround April 2028\nOne more committee meeting in 2027 😃"
+  },
+  {
+    "objectID": "index.html#statisticians-wishlist",
+    "href": "index.html#statisticians-wishlist",
+    "title": "Multivariate Transformation Models",
+    "section": "Statisticians’ Wishlist",
+    "text": "Statisticians’ Wishlist\n\n\nDistribution-free regression models\nMultivariate via Gaussian copula \\(\\boldsymbol{\\Sigma}\\)\n\nCounts\nRegression parameters \\(A_{ij}\\) from \\(\\boldsymbol{\\Sigma}\\)\n\nCovariate-dependent Gaussian copula: \\(\\boldsymbol{\\Sigma}(\\mathbf{x})\\)\n\n\\(A(\\mathbf{x})_{ij}\\) from \\(\\boldsymbol{\\Sigma}(\\mathbf{x})\\)"
+  },
+  {
+    "objectID": "index.html#theoretical-framework",
+    "href": "index.html#theoretical-framework",
+    "title": "Multivariate Transformation Models",
+    "section": "Theoretical Framework",
+    "text": "Theoretical Framework\nUnivariate model:\n\\[F_{Y_j}(y_j) = \\Phi_{0,1} (h_j(y_j)),\\]\nwhere \\(h_j\\) is a monotonic transformation function.\n\nstep function\nsmooth function (via Bernstein spline basis)\n\n\nMultivariate model:\n\\[F_{\\mathbf{Y}}(\\mathbf{y}) = {\\Phi}_{\\mathbf{0},\\boldsymbol{\\Sigma}}(\\mathbf{h}(\\mathbf{y}))\\]\n\n\n\\(\\mathbf{Y}= (Y_1,\\dots,Y_J)^\\top\\)\n\\(\\mathbf{h}(\\mathbf{Y}) = (h_1(Y_1), \\dots, h_J(Y_J))^\\top\\)"
+  },
+  {
+    "objectID": "index.html#covariance-structure",
+    "href": "index.html#covariance-structure",
+    "title": "Multivariate Transformation Models",
+    "section": "Covariance Structure",
+    "text": "Covariance Structure\n\n\\(\\operatorname{diag}(\\boldsymbol{\\Sigma}) \\overset{!}{=} \\mathbf{1}\\)\n\\(\\boldsymbol{\\Sigma}:= \\boldsymbol{\\Omega}^{-1} \\boldsymbol{\\Omega}^{-\\top}\\)\n\\(\\boldsymbol{\\Omega}:= \\boldsymbol{\\Lambda}\\operatorname{diag}(\\boldsymbol{\\Lambda}^{-1}\\boldsymbol{\\Lambda}^{-\\top})^{\\frac{1}{2}}\\)\n\\(\\boldsymbol{\\Lambda}:=\n      \\begin{pmatrix}\n        1 & & &  0 \\\\\n        \\lambda_{21} & 1  & & \\\\\n        \\vdots &  \\ddots & \\ddots & \\\\\n        \\lambda_{J1}  & \\dots & \\lambda_{J,J-1} & 1\n      \\end{pmatrix}\\)"
+  },
+  {
+    "objectID": "index.html#regressions",
+    "href": "index.html#regressions",
+    "title": "Multivariate Transformation Models",
+    "section": "Regressions",
+    "text": "Regressions\n\n\\(\\mathbf{h}(\\mathbf{Y}) \\sim \\operatorname{N}(\\mathbf{0}, \\boldsymbol{\\Sigma}) = \\operatorname{N}(\\mathbf{0}, \\boldsymbol{\\Omega}^{-1} \\boldsymbol{\\Omega}^{-\\top})\\)\n\\(\\boldsymbol{\\Omega}\\,\\mathbf{h}(\\mathbf{Y}) \\sim \\operatorname{N}(\\mathbf{0}, \\mathbf{I})\\)\n\n\nThe \\(i\\)-th row of \\(\\boldsymbol{\\Omega}\\, \\mathbf{h}(\\mathbf{Y})\\):\n\\[\n  % F(h_j(Y_j)\\mid \\mY_{&lt;j})\n  % =\n  \\sum_{i=1}^{j}\\Omega_{ji}h_i(Y_i) \\sim \\operatorname{N}(0, 1)\n\\]\n\n\n\\[\n  h_j(Y_j) - \\sum_{i=1}^{j-1}\\underbrace{-\\frac{\\Omega_{ji}}{\\Omega_{jj}}}_{A_{ij}:=}h_i(Y_i) \\sim \\operatorname{N}(0, \\Omega_{jj}^{-2})\n\\]\n\n\n\\[\nh_j(Y_j) = A_{1j} h_1(Y_1) + \\dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \\varepsilon_j, \\quad \\varepsilon_j \\sim \\operatorname{N}(0, \\Omega_{jj}^{-2})\n\\]"
+  },
+  {
+    "objectID": "index.html#covariates-mathbfx",
+    "href": "index.html#covariates-mathbfx",
+    "title": "Multivariate Transformation Models",
+    "section": "Covariates \\(\\mathbf{x}\\)",
+    "text": "Covariates \\(\\mathbf{x}\\)\n\n\\(F_{\\mathbf{Y}\\mid \\mathbf{x}}(\\mathbf{y}) = {\\Phi}_{\\mathbf{0},\\boldsymbol{\\Sigma}(\\mathbf{x})}(\\mathbf{h}(\\mathbf{y}\\mid \\mathbf{x}))\\)\n\\(\\mathbf{h}(\\mathbf{Y}\\mid \\mathbf{x}) = (h_1(Y_1 \\mid \\mathbf{x}), \\dots, h_J(Y_J \\mid \\mathbf{x}))^\\top\\)\n\nLinear shift: \\(\\mathbf{h}(\\mathbf{Y}\\mid \\mathbf{x}) = \\mathbf{h}(\\mathbf{Y}) - (\\boldsymbol{\\beta}_1, \\dots, \\boldsymbol{\\beta}_J)^\\top\\mathbf{x}\\)\n\nMarginally: \\(h_j(y_j \\mid \\mathbf{x}) = h_j(y_j) - {\\boldsymbol{\\beta}_j}^\\top\\mathbf{x}\\)\nAdd scaling: \\(h_j(y_j | \\mathbf{x})= \\mathrm e^{\\boldsymbol{\\gamma}_j(\\mathbf{x})} h_j(y_j) - {\\boldsymbol{\\beta}_j}^\\top\\mathbf{x}\\)"
+  },
+  {
+    "objectID": "index.html#counts",
+    "href": "index.html#counts",
+    "title": "Multivariate Transformation Models",
+    "section": "Counts",
+    "text": "Counts\n\nDefine \\(\\mathbf{C}= (C_1, \\dots, C_J) := (\\lceil Y_1 \\rceil, \\dots, \\lceil Y_J \\rceil) = \\lceil \\mathbf{Y}\\rceil\\)\n\n\n\n\\(F_{\\mathbf{C}}(\\mathbf{c}) = F_{\\mathbf{Y}}(\\mathbf{c})\\quad\\) for \\(\\mathbf{c}\\in {\\mathbb{N}_0}^J\\)\n\n\n\n\n\\(F_{\\mathbf{C}}(\\mathbf{y}) = F_{\\mathbf{Y}}(\\lfloor \\mathbf{y}\\rfloor)\\quad\\) for \\(\\mathbf{y}\\in \\mathbb{R}^J\\)\n\n\n\nThen for \\(\\mathbf{c}\\in {\\mathbb{N}_0}^J\\):\n\\[\n  \\begin{aligned}\n  \\mathbb{P}(\\mathbf{C}= \\mathbf{c})\n  % &= F_{\\mC}(\\cvec) + (-1)^1 \\sum_{j=1}^J F_{\\mC}(\\cvec - \\evec_j) + \\dots + (-1)^J F_{\\mC}(\\cvec - \\sum_{j=1}^J \\evec_j)\\\\\n  % &= F_{\\mY}(\\cvec) + (-1)^1 \\sum_{j=1}^J F_{\\mY}(\\cvec - \\evec_j) + \\dots + (-1)^J F_{\\mY}(\\cvec - \\sum_{j=1}^J \\evec_j)\\\\\n  % &= \\Prob\\!\\left(\\mY \\in \\prod_{j=1}^J (c_j - 1, c_j]\\right)\n  &= \\mathbb{P}\\!\\left(\\mathbf{Y}\\in (\\mathbf{c}- \\mathbf{1}, \\mathbf{c}]\\right)\\\\\n  &= \\int_{\\mathbf{c}- \\mathbf{1}}^{\\mathbf{c}} f_{\\mathbf{Y}\\mid \\mathbf{x}}(\\mathbf{y}) \\mathrm{d}\\mathbf{y}= \\int_{\\mathbf{h}(\\mathbf{c}- \\mathbf{1}\\mid \\mathbf{x})}^{\\mathbf{h}(\\mathbf{c}\\mid \\mathbf{x})} \\boldsymbol{\\phi}_{\\boldsymbol{\\Sigma}(\\mathbf{x})}(\\mathbf{z}) \\mathrm{d}\\mathbf{z}\n  \\end{aligned}\n\\]  \n\n\nPublication 1: Multi-Species Counts Transformation Models"
+  },
+  {
+    "objectID": "index.html#structural-equation-models-sem",
+    "href": "index.html#structural-equation-models-sem",
+    "title": "Multivariate Transformation Models",
+    "section": "Structural Equation Models (SEM)",
+    "text": "Structural Equation Models (SEM)\n\n\n\n\n\nhttps://web.pdx.edu/~newsomj/semclass/ho_lisrel%20notation.pdf\n\n\n\n\nLatent variables \\(\\rightarrow\\) indicators\nRegression between latent variables\nPath analysis (e.g., mediation)\nExplain \\(\\boldsymbol{\\Sigma}_{\\mathrm{total}}\\) using \\(\\boldsymbol{\\Sigma}_{\\mathrm{model}}\\)"
+  },
+  {
+    "objectID": "index.html#sem-core-objectives",
+    "href": "index.html#sem-core-objectives",
+    "title": "Multivariate Transformation Models",
+    "section": "SEM: Core Objectives",
+    "text": "SEM: Core Objectives"
+  },
+  {
+    "objectID": "index.html#ordinal-variables-muthengeneralstructuralequation1984",
+    "href": "index.html#ordinal-variables-muthengeneralstructuralequation1984",
+    "title": "Multivariate Transformation Models",
+    "section": "Ordinal Variables (Muthén 1984)",
+    "text": "Ordinal Variables (Muthén 1984)\nModeled via Gaussian latent variables and threshold transformations:"
+  },
+  {
+    "objectID": "index.html#lisrel-framework",
+    "href": "index.html#lisrel-framework",
+    "title": "Multivariate Transformation Models",
+    "section": "LISREL Framework",
+    "text": "LISREL Framework\n\nShaded symbols: simplified four-matrix notation. https://web.pdx.edu/~newsomj/semclass/ho_lisrel%20notation.pdf"
+  },
+  {
+    "objectID": "index.html#reticular-action-model-ram",
+    "href": "index.html#reticular-action-model-ram",
+    "title": "Multivariate Transformation Models",
+    "section": "Reticular Action Model (RAM)",
+    "text": "Reticular Action Model (RAM)\n\n(McArdle and McDonald 1984)\n\\[\n  \\boldsymbol{\\Sigma}= (\\mathbf{I}- \\mathbf{A})^{-1} \\mathbf{S}(\\mathbf{I}- \\mathbf{A})^{-\\top}\n\\]\n\n\\(\\mathbf{A}\\): Directed effects / regression coefficients\n\\(\\mathbf{S}\\): Covariances of error terms\n\nLimitations:\n\nUnidentifiable\nLacks flexible transformations"
+  },
+  {
+    "objectID": "index.html#publication-2-sems-via-mtms",
+    "href": "index.html#publication-2-sems-via-mtms",
+    "title": "Multivariate Transformation Models",
+    "section": "Publication 2: SEMs via MTMs",
+    "text": "Publication 2: SEMs via MTMs\nKey Advantages:\n\nSimple, identifiable parameterization\nFlexible marginal transformations\nJoint estimation of transformations and regression parameters"
+  },
+  {
+    "objectID": "index.html#future-work",
+    "href": "index.html#future-work",
+    "title": "Multivariate Transformation Models",
+    "section": "Future Work",
+    "text": "Future Work\n\n\nGoal: Covariate-dependent effects & Moderation.\nIdea: Model \\(\\mathbf{A}(\\mathbf{x})\\) via \\(\\boldsymbol{\\Lambda}(\\mathbf{x})\\).\nChallenge: How can we make only some elements of \\(\\mathbf{A}\\) covariate dependent?\n\nproblem with parameter constraints/estimation\n\nExploration: Adjusted transformation functions \\(\\mathbf{h}(\\mathbf{y}\\mid \\mathbf{x})\\).\n\n\\(\\Longrightarrow\\) Publication 3: Covariate-Dependent SEMs via MTMs"
+  },
+  {
+    "objectID": "index.html#publication-plan-timeline",
+    "href": "index.html#publication-plan-timeline",
+    "title": "Multivariate Transformation Models",
+    "section": "Publication Plan & Timeline",
+    "text": "Publication Plan & Timeline\n\nMulti-Species Counts Transformation Models\nJournal: Ecology\nCo-authors: Luisa Barbanti, Roland Brandl, Torsten Hothorn\n\n(Re)write manuscript\nReview Phase\n\nSEMs via MTMs\n\nProof of Concept\nsubmit until end of 2026\nreview process in 2027\n\nCovariate-Dependent SEMs via MTMs\n\nsubmit until end of 2027\nreview process in 2028"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Multivariate Transformation Models",
+    "section": "References",
+    "text": "References\n\n\n\n\nMcArdle, J. Jack, and Roderick P. McDonald. 1984. “Some Algebraic Properties of the Reticular Action Model for Moment Structures.” British Journal of Mathematical and Statistical Psychology 37 (2): 234–51. https://doi.org/10.1111/j.2044-8317.1984.tb00802.x.\n\n\nMuthén, Bengt. 1984. “A General Structural Equation Model with Dichotomous, Ordered Categorical, and Continuous Latent Variable Indicators.” Psychometrika 49 (1): 115–32. https://doi.org/10.1007/BF02294210."
+  }
+]
