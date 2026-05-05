@@ -151,7 +151,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Multivariate Transformation Models</h1>
-  <p class="subtitle">PhD Committee Meeting</p>
+  <p class="subtitle">This presentation: <a href="https://lgraz.com/2026-05-06--commitee-Meeting/">https://lgraz.com/2026-05-06–commitee-Meeting/</a></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -196,15 +196,14 @@ Lukas Graz
 <img data-src="_assets/curriculum.png" class="r-stretch"></section>
 <section id="defense" class="slide level2">
 <h2>Defense</h2>
-<p>Around April 2028</p>
-<p>One more committee meeting in 2027 😃</p>
+<p>Anticipated around April 2028</p>
+<p>Planned one remaining committee meeting in 2027 😃</p>
 </section>
 <section>
 <section id="statistics" class="title-slide slide level1 center scrollable">
 <h1>Statistics</h1>
 <ol type="1">
-<li>Wishlist</li>
-<li>Motivating Birds</li>
+<li>Motivating Example: Birds</li>
 <li>Theoretical Framework</li>
 <li>Counts</li>
 <li>Structural Equation Models (SEM)</li>
@@ -247,8 +246,8 @@ Lukas Graz
 <p><span class="math display">\[F_{Y_j}(y_j) = \Phi_{0,1} (h_j(y_j)),\]</span></p>
 <p>where <span class="math inline">\(h_j\)</span> is a monotonic transformation function.</p>
 <ul>
-<li>step function</li>
-<li>smooth function (via Bernstein spline basis)</li>
+<li>Step function</li>
+<li>Smooth function (via Bernstein spline basis)</li>
 </ul>
 <div class="fragment">
 <p><strong>Multivariate model:</strong></p>
@@ -309,7 +308,7 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
 <li>Linear shift: <span class="math inline">\(\mathbf{h}(\mathbf{Y}\mid \mathbf{x}) = \mathbf{h}(\mathbf{Y}) - (\boldsymbol{\beta}_1, \dots, \boldsymbol{\beta}_J)^\top\mathbf{x}\)</span>
 <ul>
 <li>Marginally: <span class="math inline">\(h_j(y_j \mid \mathbf{x}) = h_j(y_j) - {\boldsymbol{\beta}_j}^\top\mathbf{x}\)</span></li>
-<li>Add scaling: <span class="math inline">\(h_j(y_j | \mathbf{x})= \mathrm e^{\boldsymbol{\gamma}_j(\mathbf{x})} h_j(y_j) - {\boldsymbol{\beta}_j}^\top\mathbf{x}\)</span></li>
+<li>Add scaling: <span class="math inline">\(h_j(y_j \mid \mathbf{x}) = \mathrm{e}^{\boldsymbol{\gamma}_j(\mathbf{x})} h_j(y_j) - {\boldsymbol{\beta}_j}^\top\mathbf{x}\)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -347,7 +346,7 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
   &amp;= \mathbb{P}\!\left(\mathbf{Y}\in (\mathbf{c}- \mathbf{1}, \mathbf{c}]\right)\\
   &amp;= \int_{\mathbf{c}- \mathbf{1}}^{\mathbf{c}} f_{\mathbf{Y}\mid \mathbf{x}}(\mathbf{y}) \mathrm{d}\mathbf{y}= \int_{\mathbf{h}(\mathbf{c}- \mathbf{1}\mid \mathbf{x})}^{\mathbf{h}(\mathbf{c}\mid \mathbf{x})} \boldsymbol{\phi}_{\boldsymbol{\Sigma}(\mathbf{x})}(\mathbf{z}) \mathrm{d}\mathbf{z}
   \end{aligned}
-\]</span> <!-- , where $\evec_j$ is the j-th unit vector in $\RR^J$. --> <!-- - approximated via Genz XXX & Hothorn XXX --></p>
+\]</span></p>
 </div>
 <div class="fragment">
 <p><strong>Publication 1:</strong> Multi-Species Counts Transformation Models</p>
@@ -386,9 +385,6 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
 </ul>
 </div></div>
 </section>
-<section id="sem-core-objectives" class="slide level2">
-<h2>SEM: Core Objectives</h2>
-</section>
 <section id="ordinal-variables-muthengeneralstructuralequation1984" class="slide level2">
 <h2>Ordinal Variables <span class="citation" data-cites="muthenGeneralStructuralEquation1984">(<a href="#/references" role="doc-biblioref" onclick="">Muthén 1984</a>)</span></h2>
 <p>Modeled via Gaussian latent variables and threshold transformations:</p>
@@ -411,7 +407,7 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
 </ul>
 <p><strong>Limitations:</strong></p>
 <ul>
-<li>Unidentifiable</li>
+<li>Unidentifiability issues</li>
 <li>Lacks flexible transformations</li>
 </ul>
 </section>
@@ -419,7 +415,7 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
 
 <h3 id="multivariate-transformation-models-mtms">Multivariate Transformation Models (MTMs)</h3>
 <!-- Different constraints std.lv TRUE -->
-<p>Assume causal ordering <span class="math display">\[\mathbf{Y}= (\mathbf{Y}_{\text{latent}}, \mathbf{Y}_{\text{observed}})^\top\]</span></p>
+<p>Assuming a causal ordering: <span class="math display">\[\mathbf{Y}= (\mathbf{Y}_{\text{latent}}, \mathbf{Y}_{\text{observed}})^\top\]</span></p>
 <p>Expressed in RAM notation:</p>
 <ul>
 <li><span class="math inline">\(\mathbf{A}= \mathbf{I}-\operatorname{diag}(\boldsymbol{\Omega})^{-1}\boldsymbol{\Omega}\)</span></li>
@@ -445,7 +441,7 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
 <h3 id="current-progress-tasks">Current Progress &amp; Tasks</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Parameterization mapping to LISREL and RAM</label></li>
-<li><label><input type="checkbox" checked="">Consistent results for common examples</label></li>
+<li><label><input type="checkbox" checked="">Achieved consistent results for common examples</label></li>
 <li><label><input type="checkbox" checked="">Transformations:</label>
 <ul>
 <li>Ordinal</li>
@@ -453,7 +449,7 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
 </ul></li>
 <li><label><input type="checkbox">Review SEM literature</label></li>
 <li><label><input type="checkbox">Formalize theoretical write-up</label></li>
-<li><label><input type="checkbox">Initiate collaboration with SEM experts (e.g., Prof.&nbsp;Yves Rosseel)</label></li>
+<li><label><input type="checkbox">Initiate a collaboration with SEM experts (e.g., Prof.&nbsp;Yves Rosseel)</label></li>
 <li><label><input type="checkbox">Simulation Study:</label>
 <ul>
 <li>Evaluate standard errors</li>
@@ -467,9 +463,9 @@ h_j(Y_j) = A_{1j} h_1(Y_1) + \dots + A_{j-1,j} h_{j-1}(Y_{j-1}) + \varepsilon_j,
 <ul>
 <li><strong>Goal:</strong> Covariate-dependent effects &amp; Moderation.</li>
 <li><strong>Idea:</strong> Model <span class="math inline">\(\mathbf{A}(\mathbf{x})\)</span> via <span class="math inline">\(\boldsymbol{\Lambda}(\mathbf{x})\)</span>.</li>
-<li><strong>Challenge:</strong> How can we make only some elements of <span class="math inline">\(\mathbf{A}\)</span> covariate dependent?
+<li><strong>Challenge:</strong> How can we make only specific elements of <span class="math inline">\(\mathbf{A}\)</span> covariate-dependent?
 <ul>
-<li>problem with parameter constraints/estimation</li>
+<li>Challenges arise with parameter constraints and estimation</li>
 </ul></li>
 <li><strong>Exploration:</strong> Adjusted transformation functions <span class="math inline">\(\mathbf{h}(\mathbf{y}\mid \mathbf{x})\)</span>.</li>
 </ul>
@@ -483,18 +479,18 @@ Journal: Ecology<br>
 Co-authors: Luisa Barbanti, Roland Brandl, Torsten Hothorn
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">(Re)write manuscript</label></li>
-<li><label><input type="checkbox">Review Phase</label></li>
+<li><label><input type="checkbox">Peer-review phase</label></li>
 </ul></li>
 <li><em>SEMs via MTMs</em>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Proof of Concept</label></li>
-<li><label><input type="checkbox">submit until end of 2026</label></li>
-<li><label><input type="checkbox">review process in 2027</label></li>
+<li><label><input type="checkbox">Submit by the end of 2026</label></li>
+<li><label><input type="checkbox">Review process throughout 2027</label></li>
 </ul></li>
 <li><em>Covariate-Dependent SEMs via MTMs</em>
 <ul class="task-list">
-<li><label><input type="checkbox">submit until end of 2027</label></li>
-<li><label><input type="checkbox">review process in 2028</label></li>
+<li><label><input type="checkbox">Submit by the end of 2027</label></li>
+<li><label><input type="checkbox">Review process throughout 2028</label></li>
 </ul></li>
 </ol>
 </section>
