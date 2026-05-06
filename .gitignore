@@ -2,5 +2,8 @@
 /index.html
 /index.pdf
 /index_files
-/muthen.png
-/theory.md
+/.theory.md
+
+/.quarto/
+**/*.quarto_ipynb
+/_site/

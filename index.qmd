@@ -1,6 +1,6 @@
 ---
 title: "Multivariate Transformation Models"
-subtitle: "PhD Committee Meeting"
+subtitle: "This presentation: [https://lgraz.com/2026-05-06--commitee-Meeting/](https://lgraz.com/2026-05-06--commitee-Meeting/)"
 date: 06. May 2026
 date-format: "D. MMMM YYYY"
 author: "Lukas Graz"
@@ -51,17 +51,16 @@ TRANSFERABLE SKILLS: (min 3 ECTS)
 
 ## Defense
 
-Around April 2028
+Anticipated around April 2028
 
-One more committee meeting in 2027 😃
+Planned one remaining committee meeting in 2027 😃
 
 # Statistics
 
-1. Wishlist
-2. Motivating Birds
-3. Theoretical Framework
-4. Counts
-5. Structural Equation Models (SEM)
+1. Motivating Example: Birds
+2. Theoretical Framework
+3. Counts
+4. Structural Equation Models (SEM)
 
 
 ## Statisticians' Wishlist {.incremental}
@@ -115,8 +114,8 @@ $$F_{Y_j}(y_j) = \Phi_{0,1} (h_j(y_j)),$$
 
 where $h_j$ is a monotonic transformation function.
 
-- step function
-- smooth function (via Bernstein spline basis)
+- Step function
+- Smooth function (via Bernstein spline basis)
 
 . . . 
 
@@ -154,7 +153,7 @@ $$F_{\mY}(\yvec) = {\Phi}_{\nullvec,\mSigma}(\hvec(\yvec))$$
 
 . . . 
 
-The $i$-th row of $\mOmega \, \hvec(\mY)$:
+The $i$-th entry of $\mOmega \, \hvec(\mY)$:
 
 $$
   % F(h_j(Y_j)\mid \mY_{<j})
@@ -182,7 +181,7 @@ $$
 - $\hvec(\mY \mid \xvec) = (h_1(Y_1 \mid \xvec), \dots, h_J(Y_J \mid \xvec))^\top$
   - Linear shift: $\hvec(\mY \mid \xvec) = \hvec(\mY) - (\betavec_1, \dots, \betavec_J)^\top\xvec$
     - Marginally:  $h_j(y_j \mid \xvec) = h_j(y_j) - {\betavec_j}^\top\xvec$
-    - Add scaling: $\h_j(\ry_j | \rx)= \mathrm e^{\gammavec_j(\rx)} \h_j(\ry_j) - {\betavec_j}^\top\xvec$
+    - Add scaling: $h_j(y_j \mid \xvec) = \mathrm{e}^{\gammavec_j(\xvec)} h_j(y_j) - {\betavec_j}^\top\xvec$
 
 <!-- 
 ## Sampling:
@@ -219,8 +218,6 @@ $$
   &= \int_{\cvec - \onevec}^{\cvec} f_{\mY\mid \xvec}(\yvec) \mathrm{d}\yvec = \int_{\hvec(\cvec - \onevec \mid \xvec)}^{\hvec(\cvec \mid \xvec)} \phivec_{\mSigma(\xvec)}(\zvec) \mathrm{d}\zvec
   \end{aligned}
 $$
-<!-- , where $\evec_j$ is the j-th unit vector in $\RR^J$. -->
-<!-- - approximated via Genz XXX & Hothorn XXX -->
 
 . . . 
 
@@ -263,15 +260,12 @@ $$
 
 ::::
 
-## SEM: Core Objectives
-
-
 
 ## Ordinal Variables [@muthenGeneralStructuralEquation1984]
 
 Modeled via Gaussian latent variables and threshold transformations:
 
-![](muthen.png)
+![](_assets/muthen.png)
 
 ## LISREL Framework
 
@@ -292,14 +286,14 @@ $$
 
 **Limitations:**
 
-- Unidentifiable
+- Unidentifiability issues
 - Lacks flexible transformations
 
 ---
 
 ### Multivariate Transformation Models (MTMs)
 <!-- Different constraints std.lv TRUE -->
-Assume causal ordering
+Assuming a causal ordering:
 $$\mY = (\mY_{\text{latent}}, \mY_{\text{observed}})^\top$$
 
 
@@ -329,14 +323,14 @@ $$
 ### Current Progress & Tasks 
 
 - [x] Parameterization mapping to LISREL and RAM
-- [x] Consistent results for common examples
+- [x] Achieved consistent results for common examples
 - [x] Transformations:
     - Ordinal
     - Continuous (via Bernstein basis polynomials)
 
 - [ ] Review SEM literature
 - [ ] Formalize theoretical write-up
-- [ ] Initiate collaboration with SEM experts (e.g., Prof. Yves Rosseel)
+- [ ] Initiate a collaboration with SEM experts (e.g., Prof. Yves Rosseel)
 - [ ] Simulation Study:
     - Evaluate standard errors
     - Assess the effect of joint estimation on transformations
@@ -348,9 +342,8 @@ $$
 
 - **Goal:** Covariate-dependent effects & Moderation.
 - **Idea:** Model $\mA(\xvec)$ via $\mLambda(\xvec)$.
-- **Challenge:** How can we make only some elements of $\mA$ covariate dependent?
-  - problem with parameter constraints/estimation
-
+- **Challenge:** How can we make only specific elements of $\mA$ covariate-dependent?
+  - Challenges arise with parameter constraints and estimation
 - **Exploration:** Adjusted transformation functions $\hvec(\yvec \mid \xvec)$.
 
 
@@ -362,15 +355,15 @@ $\Longrightarrow$ **Publication 3:** _Covariate-Dependent SEMs via MTMs_
     Journal: Ecology  
     Co-authors: Luisa Barbanti, Roland Brandl, Torsten Hothorn
     - [x] (Re)write manuscript
-    - [ ] Review Phase
+    - [ ] Peer-review phase
 
 2. _SEMs via MTMs_
     - [x] Proof of Concept
-    - [ ] submit until end of 2026
-    - [ ] review process in 2027
+    - [ ] Submit by the end of 2026
+    - [ ] Review process throughout 2027
 
 3. _Covariate-Dependent SEMs via MTMs_
-    - [ ] submit until end of 2027
-    - [ ] review process in 2028
+    - [ ] Submit by the end of 2027
+    - [ ] Review process throughout 2028
 
 ## References
